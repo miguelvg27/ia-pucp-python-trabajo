@@ -34,7 +34,7 @@ fecha_seleccionada = st.sidebar.slider(
     'Selecciona un rango de fechas:',
     min_value=fecha_min,
     max_value=fecha_max,
-    value=(pd.to_datetime('2021-06-01').date(), pd.to_datetime('2021-06-30').date())
+    value=(pd.to_datetime('2020-11-01').date(), pd.to_datetime('2020-11-30').date())
 )
 
 
