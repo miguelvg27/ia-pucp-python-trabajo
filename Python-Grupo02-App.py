@@ -7,9 +7,9 @@ import matplotlib.pyplot as plt
 @st.cache_data
 def cargar_df():
     df = pd.read_csv('./data/Consolidado-Monitoreo-Miraflores-QAIRA-1.csv', na_values='')
-	df['Fecha'] = pd.to_datetime(df['Fecha'])
+    df['Fecha'] = pd.to_datetime(df['Fecha'])
     return df
-	
+
 df = cargar_df()
 
 # Sidebar para filtros
