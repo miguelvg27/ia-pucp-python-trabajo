@@ -64,6 +64,6 @@ df_hora = df_hora.reset_index()
 ## Garfico 2
 fig = px.bar(df_hora, y = contaminante, x = 'Hora',title= "Promedio por horas de emisiones de" +contaminante)
 fig.update_layout(xaxis_tickangle=-60)
-fig
+st.pyplot(fig)
 
 st.write(df_filtrado)
