@@ -114,8 +114,10 @@ plt.title(f"Correlación entre Humedad y Temperatura por {contaminante} y {estac
 plt.xticks(rotation=0)
 st.pyplot(plt)
 
-df = pd.DataFrame(
-    np.random.randn(1000, 2) / [1, 1] + [-12.0727, -77.0827],
-    columns=['lat', 'lon'])
+#df = pd.DataFrame(
+ #   np.random.randn(1000, 2) / [1, 1] + [-12.0727, -77.0827],
+  #  columns=['lat', 'lon'])
+
+df = df_filtrado[['latitud', 'longitud']].copy()
 
 st.map(df)
