@@ -72,5 +72,5 @@ st.write(df_filtrado)
 
 latitud_promedio = df_filtrado['Latitud'].mean()
 longitud_promedio = df_filtrado['Longitud'].mean()
-st.map(df_filtrado, zoom=12, center=(latitud_promedio, longitud_promedio))
+st.map(df_filtrado, zoom=12, center=(latitud_promedio, longitud_promedio)) 
 
