@@ -65,6 +65,11 @@ df_filtrado['Hora'] = df_filtrado['Fecha'].dt.hour
 df_hora = df_filtrado.groupby(['Hora'])[contaminante].mean()
 df_hora = df_hora.reset_index()
 
+#Crear una DataFrame por Temperatura
+df_temperatura = df_filtrado.groupby(['Temperatura (C)'])[contaminante].mean()
+df_temperatura = df_temperatura.reset_index()
+
+
 
 # Crear el gráfico
 plt.figure(figsize=(10, 6))
@@ -83,6 +88,10 @@ st.pyplot(plt)
 
 st.write(df_filtrado) 
 
-m = Map(center=[df_raw.geometry.centroid.y.iloc[0], df_raw.geometry.centroid.x.iloc[0]], zoom=14)
+# Gráfico 3
+plt.figure(figsize=(10, 4))
+sns.barplot(x='Temperatura (C)', y=contaminante, data=df_temperatura, palette='plasma')
+plt.title(f"Promedio por Temperatura de emisiones de {contaminante} en {estacion}")
+plt.xticks(rotation=0)
+st.pyplot(plt)
 
-st.map(m)
