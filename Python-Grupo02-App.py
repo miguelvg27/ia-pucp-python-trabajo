@@ -70,7 +70,7 @@ st.pyplot(plt)
 
 st.write(df_filtrado) 
 
-df = pd.DataFrame({
+df_filtrado = pd.DataFrame({
     'Latitud': [-12.0727],  # Reemplaza con tus datos reales
     'Longitud': [-77.0827]  # Reemplaza con tus datos reales
 })
