@@ -102,7 +102,7 @@ st.pyplot(plt)
 
 # Gráfico 4
 plt.figure(figsize=(10, 4))
-sns.scatter(x='Humedad (%)', y=contaminante, data=df_humedad, palette='plasma')
+sns.scatterplot(x='Humedad (%)', y=contaminante, data=df_humedad, palette='plasma')
 plt.title(f"Promedio de Humedad de emisiones de {contaminante} en {estacion}")
 plt.xticks(rotation=0)
 st.pyplot(plt)
