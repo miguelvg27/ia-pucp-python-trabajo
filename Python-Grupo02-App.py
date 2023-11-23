@@ -84,7 +84,7 @@ st.pyplot(plt)
 st.write(df_filtrado) 
 
 # Crear una aplicación Streamlit
-st.title("Mapa interactivo con Streamlit")
+#st.title("Mapa interactivo con Streamlit")
 
 # Cargar tu DataFrame con las columnas 'Latitud' y 'Longitud'
 # Asegúrate de tener estas columnas en tu conjunto de datos
@@ -110,16 +110,4 @@ st.title("Mapa interactivo con Streamlit")
 
 st.title("Mapa interactivo con Streamlit")
 
-# Coordenadas específicas
-latitud = -12.0727
-longitud = -77.0827
-
-# Crear un mapa centrado en las coordenadas específicas
-m = folium.Map(location=[latitud, longitud], zoom_start=14)
-
-# Agregar un marcador al mapa
-folium.Marker([latitud, longitud]).add_to(m)
-
-# Mostrar el mapa en Streamlit usando folium_static
-st.write("Mapa interactivo:")
-folium_static(m)
+st.map(df_raw)
