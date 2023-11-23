@@ -4,13 +4,13 @@ import numpy as np
 import seaborn as sns
 import matplotlib.pyplot as plt
 from datetime import datetime
-import subprocess
+#import subprocess
 
 #subprocess.run(["pip", "install", "pandas", "folium", "streamlit_folium", "geopandas", "ipyleaflet", "Map", "GeoJSON", "Marker", "MarkerCluster"])
 #import folium
 #from streamlit_folium import folium_static
-import geopandas as gpd
-from ipyleaflet import Map, GeoJSON, Marker, MarkerCluster
+#import geopandas as gpd
+#from ipyleaflet import Map, GeoJSON, Marker, MarkerCluster
 
 @st.cache_data
 def cargar_df():
