@@ -119,4 +119,4 @@ st.pyplot(plt)
   #   columns=['lat', 'lon'])
 
 
-st.map(df_filtrado[['Latitud', 'Longitud']])
+st.map(df_filtrado['Latitud', 'Longitud'])
