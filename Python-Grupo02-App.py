@@ -20,7 +20,7 @@ def cargar_df():
 
 #@st.cache_data() 
 def get_data():
-    df_raw = gpd.read_file('./data/peru_distrital_simple.geojson')
+    df_raw = geopandas.read_file('./data/peru_distrital_simple.geojson')
     df_raw = df_raw[df_raw.Start_bouw!=0]
     return df_raw
 
