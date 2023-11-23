@@ -53,13 +53,6 @@ plt.xticks(rotation=45)
 plt.title(f'Concentración de {contaminante} en {estacion} a lo Largo del Tiempo')
 st.pyplot(plt)
 
-#Añadir columna de hora
-df['Fecha'] = pd.to_datetime(df['Fecha'])
-df['Hora'] = df['Fecha'].dt.hour
-
-#Crear una DataFrame por media de hora
-df_hora = df_filtrado.groupby(['Hora'])[contaminante].mean()
-df_hora = df_hora.reset_index()
 
 
 
