@@ -61,10 +61,10 @@ plt.title(f'Concentración de {contaminante} en {estacion} a lo Largo del Tiempo
 st.pyplot(plt)
 
 # Gráfico 2
-plt.figure(figsize=(10, 6))
+plt.figure(figsize=(10, 4))
 sns.barplot(x='Hora', y=contaminante, data=df_hora, palette='plasma')
 plt.title(f"Promedio por horas de emisiones de {contaminante} en {estacion}")
-plt.xticks(rotation=-60)
+plt.xticks(rotation=0)
 st.pyplot(plt)
 
 
