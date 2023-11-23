@@ -6,3 +6,4 @@ matplotlib
 geopandas
 ipyleaflet
 folium
+streamlit_folium
