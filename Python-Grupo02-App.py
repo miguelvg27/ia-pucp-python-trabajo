@@ -114,9 +114,15 @@ plt.title(f"Correlación entre Humedad y Temperatura por {contaminante} y {estac
 plt.xticks(rotation=0)
 st.pyplot(plt)
 
-#df = pd.DataFrame(
- #    np.random.randn(1000, 2) / [1, 1] + [-12.0727, -77.0827],
-  #   columns=['lat', 'lon'])
+df = pd.DataFrame(
+     np.random.randn(1000, 2) / [1, 1] + [-12.0727, -77.0827],
+     columns=['lat', 'lon'])
 
+# Centro de las coordenadas
+centro_lat = -12.0727
+centro_lon = -77.0827
 
-st.map(df_filtrado['Latitud', 'Longitud'])
+# Mostrar el mapa centrado en las coordenadas específicas
+st.map(df, lat=centro_lat, lon=centro_lon, zoom=12)
+
+#st.map(df_filtrado['Latitud', 'Longitud'])
