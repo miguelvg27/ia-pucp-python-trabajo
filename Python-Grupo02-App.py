@@ -115,7 +115,7 @@ plt.xticks(rotation=0)
 st.pyplot(plt)
 
 df = pd.DataFrame(
-    np.random.randn(1000, 2) / [50, 50] + [37.76, -122.4],
+    np.random.randn(1000, 2) / [50, 50] + [-12.0727, -77.0827],
     columns=['lat', 'lon'])
 
 st.map(df)
