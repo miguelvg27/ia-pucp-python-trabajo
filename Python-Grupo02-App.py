@@ -4,8 +4,11 @@ import numpy as np
 import seaborn as sns
 import matplotlib.pyplot as plt
 from datetime import datetime
-import folium
-from streamlit_folium import folium_static
+import subprocess
+
+subprocess.run(["pip", "install", "pandas", "folium", "streamlit_folium"])
+#import folium
+#from streamlit_folium import folium_static
 #import geopandas as gpd
 #from ipyleaflet import Map, GeoJSON, Marker, MarkerCluster
 
