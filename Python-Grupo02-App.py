@@ -6,7 +6,7 @@ import matplotlib.pyplot as plt
 from datetime import datetime
 import subprocess
 
-subprocess.run(["pip", "install", "pandas", "folium", "streamlit_folium", "geopandas"])
+subprocess.run(["pip", "install", "pandas", "folium", "streamlit_folium", "geopandas", "ipyleaflet"])
 #import folium
 #from streamlit_folium import folium_static
 #import geopandas as gpd
@@ -83,31 +83,3 @@ st.pyplot(plt)
 
 st.write(df_filtrado) 
 
-# Crear una aplicación Streamlit
-#st.title("Mapa interactivo con Streamlit")
-
-# Cargar tu DataFrame con las columnas 'Latitud' y 'Longitud'
-# Asegúrate de tener estas columnas en tu conjunto de datos
-# Puedes cargar tu DataFrame real aquí
-#df_filtrado = pd.DataFrame({
-#    'Latitud': [-12.0727],
-#    'Longitud': [-77.0827]
-#})
-
-# Crear un mapa centrado en las coordenadas promedio
-#latitud_promedio = df_filtrado['Latitud'].mean()
-#longitud_promedio = df_filtrado['Longitud'].mean()
-#m = folium.Map(location=[latitud_promedio, longitud_promedio], zoom_start=14)
-
-# Agregar marcadores al mapa
-#for index, row in df_filtrado.iterrows():
- #   folium.Marker([row['Latitud'], row['Longitud']]).add_to(m)
-
-# Mostrar el mapa en Streamlit
-#st.write("Mapa interactivo:")
-#folium_static(m)
-
-
-st.title("Mapa interactivo con Streamlit")
-
-st.write(df_raw)
