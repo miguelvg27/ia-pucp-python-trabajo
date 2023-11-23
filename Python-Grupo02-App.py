@@ -13,6 +13,12 @@ def cargar_df():
     df['Fecha'] = pd.to_datetime(df['Fecha'], format='%d/%m/%Y %H:%M')
     return df
 
+@st.cache_data() 
+def get_data():
+    df_raw = gpd.read_file('./data/peru_distrital_simple.geojson')
+    df_raw = df_raw[df_raw.Start_bouw!=0]
+    return df_raw
+
 st.title('Calidad de aire en Miraflores')
 st.write('Realiza tus consultas y descarga la información')
 
