@@ -83,3 +83,4 @@ st.pyplot(plt)
 
 st.write(df_filtrado) 
 
+m = Map(center=[df_raw.geometry.centroid.y.iloc[0], df_raw.geometry.centroid.x.iloc[0]], zoom=14)
