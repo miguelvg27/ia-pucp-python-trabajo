@@ -69,15 +69,3 @@ st.pyplot(plt)
 
 
 st.write(df_filtrado) 
-
-#Crear una DataFrame por Latitud y Longitud
-df_miraflores = df_filtrado.groupby(['Hora'])[contaminante].mean()
-
-
-# Gráfico 3
-plt.figure(figsize=(10, 4))
-sns.barplot(x='Hora', y=contaminante, data=df_hora, palette='plasma')
-plt.title(f"Promedio por horas de emisiones de {contaminante} en {estacion} 2")
-plt.xticks(rotation=0)
-st.pyplot(plt)
-
