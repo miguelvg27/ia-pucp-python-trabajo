@@ -4,8 +4,9 @@ import numpy as np
 import seaborn as sns
 import matplotlib.pyplot as plt
 from datetime import datetime
-import geopandas as gpd
-from ipyleaflet import Map, GeoJSON, Marker, MarkerCluster
+import folium
+#import geopandas as gpd
+#from ipyleaflet import Map, GeoJSON, Marker, MarkerCluster
 
 @st.cache_data
 def cargar_df():
@@ -78,21 +79,27 @@ st.pyplot(plt)
 
 st.write(df_filtrado) 
 
-# Cargar el GeoJSON del distrito de Miraflores
+# Crear una aplicación Streamlit
+st.title("Mapa interactivo con Streamlit")
 
-#geojson_path = './data/peru_distrital_simple.geojson'
-#miraflores_geojson = gpd.read_file(geojson_path)
+# Cargar tu DataFrame con las columnas 'Latitud' y 'Longitud'
+# Asegúrate de tener estas columnas en tu conjunto de datos
+# Puedes cargar tu DataFrame real aquí
+df_filtrado = pd.DataFrame({
+    'Latitud': [-12.0727, -12.071, -12.073],
+    'Longitud': [-77.0827, -77.085, -77.080]
+})
 
-# Agregar el GeoJSON del distrito de Miraflores al mapa
-geojson_layer = GeoJSON(data=dr_raw.__geo_interface__)
-m.add_layer(geojson_layer)
+# Crear un mapa centrado en las coordenadas promedio
+latitud_promedio = df_filtrado['Latitud'].mean()
+longitud_promedio = df_filtrado['Longitud'].mean()
+m = folium.Map(location=[latitud_promedio, longitud_promedio], zoom_start=14)
 
-# Crear un grupo de marcadores
-#marker_cluster = MarkerCluster()
+# Agregar marcadores al mapa
+for index, row in df_filtrado.iterrows():
+    folium.Marker([row['Latitud'], row['Longitud']]).add_to(m)
 
-st.map(m)
-
-#latitud_promedio = df_filtrado['Latitud'].mean()
-#longitud_promedio = df_filtrado['Longitud'].mean()
-#st.map(df_filtrado, zoom=12, center=(latitud_promedio, longitud_promedio)) 
+# Mostrar el mapa en Streamlit
+st.write("Mapa interactivo:")
+st.folium_chart(m)
 
