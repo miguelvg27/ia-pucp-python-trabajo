@@ -75,6 +75,6 @@ df = pd.DataFrame({
     'Longitud': [-77.0827]  # Reemplaza con tus datos reales
 })
 
-# Mostrar el mapa con folium
+# Mostrar el mapa 
 st.map(df)
 
