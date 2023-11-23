@@ -44,6 +44,13 @@ df_filtrado = df[(df['Estación de monitoreo'] == estacion) &
                  (df['Fecha'].dt.date >= fecha_seleccionada[0]) & 
                  (df['Fecha'].dt.date <= fecha_seleccionada[1])]
 
+# Añadir columna de hora
+df_filtrado['Fecha'] = pd.to_datetime(df_filtrado['Fecha'])
+df_filtrado['Hora'] = df_filtrado['Fecha'].dt.hour
+
+#Crear una DataFrame por media de hora
+df_hora = df_filtrado.groupby(['Hora'])[contaminante].mean()
+df_hora = df_hora.reset_index()
 
 
 # Crear el gráfico
