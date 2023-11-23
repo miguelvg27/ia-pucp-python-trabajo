@@ -123,6 +123,6 @@ centro_lat = -12.0727
 centro_lon = -77.0827
 
 # Mostrar el mapa centrado en las coordenadas específicas
-st.map(df, lat=centro_lat, lon=centro_lon, zoom=12)
+#st.map(df, lat=centro_lat, lon=centro_lon, zoom=12)
 
-#st.map(df_filtrado['Latitud', 'Longitud'])
+st.map(df)
