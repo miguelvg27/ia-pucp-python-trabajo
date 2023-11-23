@@ -5,6 +5,7 @@ import seaborn as sns
 import matplotlib.pyplot as plt
 from datetime import datetime
 import folium
+from streamlit_folium import folium_static
 #import geopandas as gpd
 #from ipyleaflet import Map, GeoJSON, Marker, MarkerCluster
 
@@ -86,8 +87,8 @@ st.title("Mapa interactivo con Streamlit")
 # Asegúrate de tener estas columnas en tu conjunto de datos
 # Puedes cargar tu DataFrame real aquí
 df_filtrado = pd.DataFrame({
-    'Latitud': [-12.0727, -12.071, -12.073],
-    'Longitud': [-77.0827, -77.085, -77.080]
+    'Latitud': [-12.0727],
+    'Longitud': [-77.0827]
 })
 
 # Crear un mapa centrado en las coordenadas promedio
@@ -101,5 +102,5 @@ for index, row in df_filtrado.iterrows():
 
 # Mostrar el mapa en Streamlit
 st.write("Mapa interactivo:")
-st.folium_chart(m)
+folium_static(m)
 
