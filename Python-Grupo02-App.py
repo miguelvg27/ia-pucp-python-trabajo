@@ -90,7 +90,7 @@ st.write(df_filtrado)
 # Crear un grupo de marcadores
 #marker_cluster = MarkerCluster()
 
-#st.map(m)
+st.map(df_raw)
 
 #latitud_promedio = df_filtrado['Latitud'].mean()
 #longitud_promedio = df_filtrado['Longitud'].mean()
