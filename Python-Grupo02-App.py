@@ -8,8 +8,6 @@ import folium
 import geopandas as gpd
 from ipyleaflet import Map, GeoJSON, Marker, MarkerCluster
 
-!wget -O 'peru_distrital_simple.geojson' https://raw.githubusercontent.com/miguelvg27/ia-pucp-python-trabajo/main/peru_distrital_simple.geojson # polígonos por distrito
-
 @st.cache_data
 def cargar_df():
     df = pd.read_csv('./data/Consolidado-Monitoreo-Miraflores-QAIRA-1.csv', na_values='')
@@ -76,7 +74,8 @@ st.pyplot(plt)
 st.write(df_filtrado) 
 
 # Cargar el GeoJSON del distrito de Miraflores
-geojson_path = 'peru_distrital_simple.geojson'
+
+geojson_path = './data/peru_distrital_simple.geojson'
 miraflores_geojson = gpd.read_file(geojson_path)
 
 # Agregar el GeoJSON del distrito de Miraflores al mapa
