@@ -107,3 +107,10 @@ plt.title(f"Promedio de Humedad de emisiones de {contaminante} en {estacion}")
 plt.xticks(rotation=0)
 st.pyplot(plt)
 
+# Gráfico 5
+plt.figure(figsize=(10, 4))
+sns.heatmap(df_filtrado[['Temperatura', 'Humedad']].corr(), annot=True)
+plt.title(f"Promedio de Humedad de emisiones de {contaminante} en {estacion}")
+plt.xticks(rotation=0)
+st.pyplot(plt)
+
