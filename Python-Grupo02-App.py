@@ -68,7 +68,7 @@ plt.xticks(rotation=0)
 st.pyplot(plt)
 
 
-st.write(df_filtrado)
+st.write(df_filtrado) 
 
 #Crear una DataFrame por Latitud y Longitud
 df_miraflores = df_filtrado.groupby(['Hora'])[contaminante].mean()
