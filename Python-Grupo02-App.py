@@ -89,21 +89,37 @@ st.title("Mapa interactivo con Streamlit")
 # Cargar tu DataFrame con las columnas 'Latitud' y 'Longitud'
 # Asegúrate de tener estas columnas en tu conjunto de datos
 # Puedes cargar tu DataFrame real aquí
-df_filtrado = pd.DataFrame({
-    'Latitud': [-12.0727],
-    'Longitud': [-77.0827]
-})
+#df_filtrado = pd.DataFrame({
+#    'Latitud': [-12.0727],
+#    'Longitud': [-77.0827]
+#})
 
 # Crear un mapa centrado en las coordenadas promedio
-latitud_promedio = df_filtrado['Latitud'].mean()
-longitud_promedio = df_filtrado['Longitud'].mean()
-m = folium.Map(location=[latitud_promedio, longitud_promedio], zoom_start=14)
+#latitud_promedio = df_filtrado['Latitud'].mean()
+#longitud_promedio = df_filtrado['Longitud'].mean()
+#m = folium.Map(location=[latitud_promedio, longitud_promedio], zoom_start=14)
 
 # Agregar marcadores al mapa
-for index, row in df_filtrado.iterrows():
-    folium.Marker([row['Latitud'], row['Longitud']]).add_to(m)
+#for index, row in df_filtrado.iterrows():
+ #   folium.Marker([row['Latitud'], row['Longitud']]).add_to(m)
 
 # Mostrar el mapa en Streamlit
+#st.write("Mapa interactivo:")
+#folium_static(m)
+
+
+st.title("Mapa interactivo con Streamlit")
+
+# Coordenadas específicas
+latitud = -12.0727
+longitud = -77.0827
+
+# Crear un mapa centrado en las coordenadas específicas
+m = folium.Map(location=[latitud, longitud], zoom_start=14)
+
+# Agregar un marcador al mapa
+folium.Marker([latitud, longitud]).add_to(m)
+
+# Mostrar el mapa en Streamlit usando folium_static
 st.write("Mapa interactivo:")
 folium_static(m)
-
