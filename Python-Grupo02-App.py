@@ -60,10 +60,6 @@ plt.xticks(rotation=45)
 plt.title(f'Concentración de {contaminante} en {estacion} a lo Largo del Tiempo')
 st.pyplot(plt)
 
-## Garfico 2
-fig = px.bar(df_hora, y = contaminante, x = 'Hora',title= "Promedio por horas de emisiones de" +contaminante)
-fig.update_layout(xaxis_tickangle=-60)
-st.pyplot(fig)
 
 
 st.write(df_filtrado)
