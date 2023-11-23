@@ -69,6 +69,10 @@ df_hora = df_hora.reset_index()
 df_temperatura = df_filtrado.groupby(['Temperatura (C)'])[contaminante].mean()
 df_temperatura = df_temperatura.reset_index()
 
+#Crear una DataFrame por Humedad
+df_humedad = df_filtrado.groupby(['Humedad (%)'])[contaminante].mean()
+df_humedad = df_humedad.reset_index()
+
 
 
 # Crear el gráfico
@@ -92,6 +96,14 @@ st.write(df_filtrado)
 plt.figure(figsize=(10, 4))
 sns.barplot(x='Temperatura (C)', y=contaminante, data=df_temperatura, palette='plasma')
 plt.title(f"Promedio por Temperatura de emisiones de {contaminante} en {estacion}")
+plt.xticks(rotation=0)
+st.pyplot(plt)
+
+
+# Gráfico 4
+plt.figure(figsize=(10, 4))
+sns.barplot(x='Humedad (%)', y=contaminante, data=df_humedad, palette='plasma')
+plt.title(f"Promedio por Humedad de emisiones de {contaminante} en {estacion}")
 plt.xticks(rotation=0)
 st.pyplot(plt)
 
