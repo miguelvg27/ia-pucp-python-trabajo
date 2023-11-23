@@ -4,6 +4,11 @@ import numpy as np
 import seaborn as sns
 import matplotlib.pyplot as plt
 from datetime import datetime
+import folium
+import geopandas as gpd
+from ipyleaflet import Map, GeoJSON, Marker, MarkerCluster
+
+!wget -O 'peru_distrital_simple.geojson' https://raw.githubusercontent.com/miguelvg27/ia-pucp-python-trabajo/main/peru_distrital_simple.geojson # polígonos por distrito
 
 @st.cache_data
 def cargar_df():
@@ -70,7 +75,20 @@ st.pyplot(plt)
 
 st.write(df_filtrado) 
 
-latitud_promedio = df_filtrado['Latitud'].mean()
-longitud_promedio = df_filtrado['Longitud'].mean()
-st.map(df_filtrado, zoom=12, center=(latitud_promedio, longitud_promedio)) 
+# Cargar el GeoJSON del distrito de Miraflores
+geojson_path = 'peru_distrital_simple.geojson'
+miraflores_geojson = gpd.read_file(geojson_path)
+
+# Agregar el GeoJSON del distrito de Miraflores al mapa
+geojson_layer = GeoJSON(data=miraflores_geojson.__geo_interface__)
+m.add_layer(geojson_layer)
+
+# Crear un grupo de marcadores
+marker_cluster = MarkerCluster()
+
+st.map(m)
+
+#latitud_promedio = df_filtrado['Latitud'].mean()
+#longitud_promedio = df_filtrado['Longitud'].mean()
+#st.map(df_filtrado, zoom=12, center=(latitud_promedio, longitud_promedio)) 
 
