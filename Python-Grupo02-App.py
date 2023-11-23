@@ -9,7 +9,7 @@ from datetime import datetime
 #subprocess.run(["pip", "install", "pandas", "folium", "streamlit_folium", "geopandas", "ipyleaflet", "Map", "GeoJSON", "Marker", "MarkerCluster"])
 #import folium
 #from streamlit_folium import folium_static
-import geopandas as gpd
+#import geopandas as gpd
 #from ipyleaflet import Map, GeoJSON, Marker, MarkerCluster
 
 @st.cache_data
