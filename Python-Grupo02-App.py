@@ -70,11 +70,8 @@ st.pyplot(plt)
 
 st.write(df_filtrado) 
 
-df_filtrado = pd.DataFrame({
-    'Latitud': [-12.0727],  # Reemplaza con tus datos reales
-    'Longitud': [-77.0827]  # Reemplaza con tus datos reales
-})
+df_filtrado = pd.DataFrame([-12.0727,-77.0827], columns = ['Latitud','Longitud'])
 
 # Mostrar el mapa 
-st.map(df)
+st.map(df_filtrado)
 
