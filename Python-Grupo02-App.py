@@ -110,4 +110,4 @@ st.write(df_filtrado)
 
 st.title("Mapa interactivo con Streamlit")
 
-st.map(df_raw)
+st.write(df_raw)
