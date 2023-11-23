@@ -84,13 +84,13 @@ st.write(df_filtrado)
 #miraflores_geojson = gpd.read_file(geojson_path)
 
 # Agregar el GeoJSON del distrito de Miraflores al mapa
-#geojson_layer = GeoJSON(data=miraflores_geojson.__geo_interface__)
-#m.add_layer(geojson_layer)
+geojson_layer = GeoJSON(data=dr_raw.__geo_interface__)
+m.add_layer(geojson_layer)
 
 # Crear un grupo de marcadores
 #marker_cluster = MarkerCluster()
 
-st.map(df_raw)
+st.map(m)
 
 #latitud_promedio = df_filtrado['Latitud'].mean()
 #longitud_promedio = df_filtrado['Longitud'].mean()
