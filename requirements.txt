@@ -5,3 +5,4 @@ seaborn
 matplotlib
 geopandas
 ipyleaflet
+folium
