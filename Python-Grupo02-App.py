@@ -4,8 +4,8 @@ import numpy as np
 import seaborn as sns
 import matplotlib.pyplot as plt
 from datetime import datetime
-#import geopandas as gpd
-#from ipyleaflet import Map, GeoJSON, Marker, MarkerCluster
+import geopandas as gpd
+from ipyleaflet import Map, GeoJSON, Marker, MarkerCluster
 
 @st.cache_data
 def cargar_df():
