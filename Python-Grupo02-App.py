@@ -70,10 +70,10 @@ st.pyplot(plt)
 
 st.write(df_filtrado)
 
-# Gráfico 2
+# Gráfico 3
 plt.figure(figsize=(10, 4))
 sns.barplot(x='Hora', y=contaminante, data=df_hora, palette='plasma')
-plt.title(f"Promedio por horas de emisiones de {contaminante} en {estacion}")
+plt.title(f"Promedio por horas de emisiones de {contaminante} en {estacion} 2")
 plt.xticks(rotation=0)
 st.pyplot(plt)
 
