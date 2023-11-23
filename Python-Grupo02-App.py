@@ -95,7 +95,7 @@ st.write(df_filtrado)
 # Gráfico 3
 plt.figure(figsize=(10, 4))
 sns.barplot(x='Temperatura (C)', y=contaminante, data=df_temperatura, palette='plasma')
-plt.title(f"Promedio por Temperatura de emisiones de {contaminante} en {estacion}")
+plt.title(f"Promedio de Temperatura de emisiones de {contaminante} en {estacion}")
 plt.xticks(rotation=0)
 st.pyplot(plt)
 
@@ -103,7 +103,7 @@ st.pyplot(plt)
 # Gráfico 4
 plt.figure(figsize=(10, 4))
 sns.barplot(x='Humedad (%)', y=contaminante, data=df_humedad, palette='plasma')
-plt.title(f"Promedio por Humedad de emisiones de {contaminante} en {estacion}")
+plt.title(f"Promedio de Humedad de emisiones de {contaminante} en {estacion}")
 plt.xticks(rotation=0)
 st.pyplot(plt)
 
