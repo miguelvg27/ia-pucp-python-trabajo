@@ -10,7 +10,7 @@ subprocess.run(["pip", "install", "pandas", "folium", "streamlit_folium", "geopa
 #import folium
 #from streamlit_folium import folium_static
 #import geopandas as gpd
-#from ipyleaflet import Map, GeoJSON, Marker, MarkerCluster
+from ipyleaflet import Map, GeoJSON, Marker, MarkerCluster
 
 @st.cache_data
 def cargar_df():
