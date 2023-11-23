@@ -68,7 +68,7 @@ plt.xticks(rotation=0)
 st.pyplot(plt)
 
 
-st.write(df_filtrado)
+#st.write(df_filtrado)
 
 # Gráfico 3
 plt.figure(figsize=(10, 4))
