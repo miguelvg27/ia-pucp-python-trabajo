@@ -116,7 +116,7 @@ st.pyplot(plt)
 
 # Cargar el GeoJSON del distrito de Miraflores
 geojson_path = 'peru_distrital_simple.geojson'
-miraflores_geojson = gpd.read_file(geojson_path)
+miraflores_geojson = geopandas.read_file(geojson_path)
 
 m = Map(center=[miraflores_geojson.geometry.centroid.y.iloc[0], miraflores_geojson.geometry.centroid.x.iloc[0]], zoom=14)
 
