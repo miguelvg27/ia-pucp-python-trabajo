@@ -114,3 +114,15 @@ plt.title(f"Correlación entre Humedad y Temperatura por {contaminante} y {estac
 plt.xticks(rotation=0)
 st.pyplot(plt)
 
+# Cargar el GeoJSON del distrito de Miraflores
+geojson_path = 'peru_distrital_simple.geojson'
+miraflores_geojson = gpd.read_file(geojson_path)
+
+m = Map(center=[miraflores_geojson.geometry.centroid.y.iloc[0], miraflores_geojson.geometry.centroid.x.iloc[0]], zoom=14)
+
+# Agregar el GeoJSON del distrito de Miraflores al mapa
+geojson_layer = GeoJSON(data=miraflores_geojson.__geo_interface__)
+m.add_layer(geojson_layer)
+
+# Crear un grupo de marcadores
+marker_cluster = MarkerCluster()
