@@ -70,8 +70,7 @@ st.pyplot(plt)
 
 st.write(df_filtrado) 
 
-df_filtrado = pd.DataFrame({'Latitud': [-12.0727], 'Longitud': [-77.0827]})
-
-# Mostrar el mapa 
-st.map(df_filtrado)
+latitud_promedio = df_filtrado['Latitud'].mean()
+longitud_promedio = df_filtrado['Longitud'].mean()
+st.map(df_filtrado, zoom=12, center=(latitud_promedio, longitud_promedio))
 
