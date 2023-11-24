@@ -185,5 +185,6 @@ st.map(df_miraflores,
     latitude='Latitud', 
     longitude='Longitud',
     color=contaminante,  
+    cmap='viridis',
     use_container_width=True  
 ) 
