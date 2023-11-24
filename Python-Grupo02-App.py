@@ -186,4 +186,4 @@ st.map(df_filtrado,
     longitude='Longitud',
     color='CO (ug/m3)',  # Puedes ajustar esto a la columna que desees visualizar
     use_container_width=True  # Ajustar el ancho del mapa al contenedor
-)
+) 
