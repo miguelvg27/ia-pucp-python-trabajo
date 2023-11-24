@@ -82,8 +82,10 @@ df_hora_Ruido = df_filtrado.groupby(['Hora'])['Ruido (dB)'].mean().reset_index()
  #                (df['PM2.5 (ug/m3)']) & 
   #               (df['CO (ug/m3)'])]
 
-df_miraflores = df[(df['Estación de monitoreo'] == estacion)& (df['Fecha'].dt.hour == hora_seleccionada)][['Estación de monitoreo','Latitud','Longitud', 'PM2.5 (ug/m3)', 'CO (ug/m3)', 'NO2 (ug/m3)', 'O3 (ug/m3)','Fecha']]
+df_miraflores = df[(df['Estación de monitoreo'] == estacion)][['Estación de monitoreo','Latitud','Longitud', 'PM2.5 (ug/m3)', 'CO (ug/m3)', 'NO2 (ug/m3)', 'O3 (ug/m3)','Fecha']]
 df_miraflores['Hour'] = df_miraflores['Fecha'].dt.hour
+
+df_miraflores_hora = df[(df['Estación de monitoreo'] == 'estacion') & (df['Fecha'].dt.hour == hora_seleccionada)]
 
 # Crear el gráfico
 plt.figure(figsize=(10, 6))
