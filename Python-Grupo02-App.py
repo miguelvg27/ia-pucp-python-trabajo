@@ -217,12 +217,12 @@ st.map(df_miraflores,
     longitude='Longitud',
     color = "#ffaa0088",
     size = "100",
-       zoom =5,
+       zoom =15,
     use_container_width=True)
 
 df5 = pd.DataFrame({
-    "col11": [mi_latitud2] * num_repeticiones,
-    "col22": [mi_longitud2] * num_repeticiones,
+    "col11": [mi_latitud1,mi_latitud2] * num_repeticiones,
+    "col22": [mi_longitud1,mi_longitud2] * num_repeticiones,
     "col33": np.random.randn(num_repeticiones) * 100,
     "col44": np.random.rand(num_repeticiones, 4).tolist(),
 })
