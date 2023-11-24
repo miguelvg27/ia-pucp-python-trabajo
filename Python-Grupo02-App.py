@@ -181,10 +181,12 @@ st.map(df3,
     size='col3',
     color='col4')
 
-st.map(df_miraflores, 
-    latitude='Latitud', 
-    longitude='Longitud',
-    color=contaminante,  
-    cmap='viridis',
-    use_container_width=True  
-) 
+st.write(df_miraflores) 
+
+#st.map(df_miraflores, 
+ #   latitude='Latitud', 
+ #   longitude='Longitud',
+  #  color=contaminante,  
+   # cmap='viridis',
+    #use_container_width=True  
+#) 
