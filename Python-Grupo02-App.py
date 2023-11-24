@@ -216,7 +216,7 @@ st.map(df_miraflores,
     latitude='Latitud',
     longitude='Longitud',
     color = "#ffaa0088",
-    size = 10,
+    size = 100,
        zoom =13,
     use_container_width=True)
 
