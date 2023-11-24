@@ -76,7 +76,7 @@ df_humedad = df_humedad.reset_index()
 #Crear una DataFrame del Ruido Promedio por hora
 df_hora_Ruido = df_filtrado.groupby(['Hora'])['Ruido (dB)'].mean().reset_index()
 
-df_miraflores = df_filtrado.groupby(['Latitud', 'Longitud'])['Contaminate'].mean().reset_index()
+#df_miraflores = df_filtrado.groupby(['Latitud', 'Longitud'])['Contaminate'].mean().reset_index()
 
 # Crear el gráfico
 plt.figure(figsize=(10, 6))
