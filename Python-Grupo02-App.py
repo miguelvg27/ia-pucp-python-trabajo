@@ -156,16 +156,20 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 
+import streamlit as st
+import pandas as pd
+import numpy as np
+
 # Definir latitud y longitud específicas
 mi_latitud = -12.0727
 mi_longitud = -77.0827
 
 # Crear un DataFrame con latitudes y longitudes específicas
 df3 = pd.DataFrame({
-    "col1": [mi_latitud] + list(np.random.randn(1) / 50 + mi_latitud),
-    "col2": [mi_longitud] + list(np.random.randn(1) / 50 + mi_longitud),
-    "col3": np.random.randn(1) * 100,
-    "col4": np.random.rand(1, 4).tolist(),
+    "col1": [mi_latitud] + list(np.random.randn(999) / 50 + mi_latitud),
+    "col2": [mi_longitud] + list(np.random.randn(999) / 50 + mi_longitud),
+    "col3": np.random.randn(1000) * 100,
+    "col4": np.random.rand(1000, 4).tolist(),
 })
 
 # Crear el mapa en Streamlit
