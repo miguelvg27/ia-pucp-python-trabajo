@@ -207,23 +207,35 @@ st.map(df_miraflores,
 # Definir latitud y longitud específicas
 
 #Ovalo Manuel Bonilla
-mi_latitud = -12.119250414642934
-mi_longitud = -77.0528653
+mi_latitud1 = -12.119250414642934
+mi_longitud1 = -77.0528653
 
 #Ovalo Miraflores
-mi_latitud = df_miraflores['Latitud']
-mi_longitud = df_miraflores['Longitud']
+mi_latitud2 = -12.11926161728536
+mi_longitud2 = -77.02909685321141
 
 # Crear un DataFrame con latitudes y longitudes específicas
 num_repeticiones = 1000
 
 df4 = pd.DataFrame({
-    "col1": [mi_latitud] * num_repeticiones,
-    "col2": [mi_longitud] * num_repeticiones,
+    "col1": [mi_latitud1] * num_repeticiones,
+    "col2": [mi_longitud1] * num_repeticiones,
     "col3": np.random.randn(num_repeticiones) * 100,
     "col4": np.random.rand(num_repeticiones, 4).tolist(),
 })
 st.map(df4,
+    latitude='col1',
+    longitude='col2',
+    size='col3',
+    color='col4')
+
+df5 = pd.DataFrame({
+    "col1": [mi_latitud2] * num_repeticiones,
+    "col2": [mi_longitud2] * num_repeticiones,
+    "col3": np.random.randn(num_repeticiones) * 100,
+    "col4": np.random.rand(num_repeticiones, 4).tolist(),
+})
+st.map(df5,
     latitude='col1',
     longitude='col2',
     size='col3',
