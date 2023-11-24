@@ -141,7 +141,7 @@ st.write(df_miraflores)
 # Mapa automatico que cambia con el Slide de contaminantes y Estacion
 #Grafico 7
 st.subheader(f'Mapa interactivo de emisiones de {contaminante} en {estacion} a las {hora_seleccionada} horas ')
-st.map(df_miraflores,
+st.map(df_miraflores_hora,
     latitude='Latitud',
     longitude='Longitud',
     color = "#3333FF",
