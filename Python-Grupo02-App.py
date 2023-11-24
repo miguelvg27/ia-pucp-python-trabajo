@@ -77,7 +77,7 @@ df_humedad = df_humedad.reset_index()
 #Crear una DataFrame del Ruido Promedio por hora
 df_hora_Ruido = df_filtrado.groupby(['Hora'])['Ruido (dB)'].mean().reset_index()
 
-df_miraflores = df_filtrado.groupby(['Latitud', 'Longitud'])[contaminante].mean().reset_index()
+df_miraflores = df_filtrado.groupby(['Estación de Monitoreo'])[contaminante].mean().reset_index()
 
 # Crear el gráfico
 plt.figure(figsize=(10, 6))
@@ -204,6 +204,12 @@ import numpy as np
 import streamlit as st
 
 # Definir latitud y longitud específicas
+
+#Ovalo Manuel Bonilla
+mi_latitud = -12.119250414642934
+mi_longitud = --77.0528653
+
+#Ovalo Miraflores
 mi_latitud = -12.119250414642934
 mi_longitud = -77.02904771266907
 
