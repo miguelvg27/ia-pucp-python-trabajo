@@ -212,7 +212,13 @@ mi_longitud2 = -77.02906493158211
 # Crear un DataFrame con latitudes y longitudes específicas
 num_repeticiones = 1000
 
-
+st.map(df_miraflores,
+    latitude='Latitud',
+    longitude='Longitud',
+    color = "#ffaa0088",
+    size = "100",
+       zoom =5,
+    use_container_width=True)
 
 df5 = pd.DataFrame({
     "col11": [mi_latitud2] * num_repeticiones,
@@ -226,13 +232,7 @@ st.map(df5,
     size='col33',
     color='col44')
 
-st.map(df_miraflores,
-    latitude='Latitud',
-    longitude='Longitud',
-    color = "#ffaa0088",
-    size = "100",
-       zoom =50,
-    use_container_width=True)
+
 
 
 
