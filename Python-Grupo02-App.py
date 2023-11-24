@@ -83,7 +83,8 @@ df_hora_Ruido = df_filtrado.groupby(['Hora'])['Ruido (dB)'].mean().reset_index()
   #               (df['CO (ug/m3)'])]
 
 df_miraflores = df[(df['Estación de monitoreo'] == estacion)][['Estación de monitoreo','Latitud','Longitud', 'PM2.5 (ug/m3)', 'CO (ug/m3)', 'NO2 (ug/m3)', 'O3 (ug/m3)','Fecha']]
-df_miraflores['Hour'] = df_miraflores['Fecha'].dt.hour
+df_miraflores['Hora'] = df_miraflores['Fecha'].dt.hour
+df_miraflores = df[(df['Estación de monitoreo'] == estacion)][['Estación de monitoreo','Latitud','Longitud', 'PM2.5 (ug/m3)', 'CO (ug/m3)', 'NO2 (ug/m3)', 'O3 (ug/m3)','Fecha','Hora']]
 
 df_miraflores_hora = df[(df['Estación de monitoreo'] == estacion) & (df['Fecha'].dt.hour == hora_seleccionada)]
 
@@ -240,7 +241,6 @@ df4['contaminante'] = np.random.randn(num_repeticiones)
 st.map(df_miraflores,
     latitude='Latitud',
     longitude='Longitud',
-    color = 'Hour',
     use_container_width=True)
 
 st.map(df4,
