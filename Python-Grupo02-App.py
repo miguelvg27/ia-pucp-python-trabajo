@@ -172,7 +172,7 @@ df5 = pd.DataFrame({
     "col33": np.random.randn(num_repeticiones) * 100,
     "col44": np.random.rand(num_repeticiones, 4).tolist(),
 })
-st.subheader('Latitud y Longitud de estaciones en Miraflores')
+st.subheader('Latitud y Longitud de estaciones de los contaminantes en Miraflores')
 st.map(df5,
     latitude='col11',
     longitude='col22',
