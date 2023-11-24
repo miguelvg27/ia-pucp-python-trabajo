@@ -184,6 +184,6 @@ st.map(df3,
 st.map(df_miraflores, 
     latitude='Latitud', 
     longitude='Longitud',
-    color=contaminante,  # Puedes ajustar esto a la columna que desees visualizar
-    use_container_width=True  # Ajustar el ancho del mapa al contenedor
+    color=contaminante,  
+    use_container_width=True  
 ) 
