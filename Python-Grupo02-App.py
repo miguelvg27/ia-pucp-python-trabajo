@@ -218,8 +218,8 @@ mi_longitud = -77.02904771266907
 num_repeticiones = 1000
 
 df4 = pd.DataFrame({
-    "col1": [df_miraflores['Latitud']] * num_repeticiones,
-    "col2": [df_miraflores['Longitud']] * num_repeticiones,
+    "col1": [mi_latitud] * num_repeticiones,
+    "col2": [mi_longitud] * num_repeticiones,
     "col3": np.random.randn(num_repeticiones) * 100,
     "col4": np.random.rand(num_repeticiones, 4).tolist(),
 })
