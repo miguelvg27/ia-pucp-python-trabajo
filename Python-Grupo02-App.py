@@ -179,8 +179,8 @@ df3 = pd.DataFrame({
 st.map(df3,
     latitude='col1',
     longitude='col2',
-    size='col3',
-    color='contaminante')
+    size='contaminante',
+    color='col4')
 
 st.write(df_miraflores) 
 
