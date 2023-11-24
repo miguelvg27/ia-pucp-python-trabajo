@@ -159,11 +159,9 @@ mi_longitud1 = -77.0528653
 mi_latitud2 = -12.119238450116725
 mi_longitud2 = -77.02906493158211
 
+num_repeticiones = 1000
 latitudes = [mi_latitud1, mi_latitud2] * (num_repeticiones // 2)
 longitudes = [mi_longitud1, mi_longitud2] * (num_repeticiones // 2)
-
-# Crear un DataFrame con latitudes y longitudes específicas
-num_repeticiones = 1000
 
 df5 = pd.DataFrame({
     "col11": latitudes,
