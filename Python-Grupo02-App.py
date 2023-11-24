@@ -105,7 +105,7 @@ st.pyplot(plt)
 
 # Gráfico 4
 plt.figure(figsize=(10, 4))
-sns.boxplot(x='Hora', y='Humedad (%)', data=df_humedad, palette='plasma')
+sns.violinplot(x='Hora', y='Humedad (%)', data=df_humedad, palette='plasma')
 plt.title(f"Promedio de Humedad de emisiones de {contaminante} en {estacion}")
 plt.xticks(rotation=90)
 st.pyplot(plt)
