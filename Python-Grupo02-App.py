@@ -167,13 +167,14 @@ import numpy as np
 mi_latitud = -12.0727
 mi_longitud = -77.0827
 
-# Crear un DataFrame con latitudes y longitudes específicas
+# Crear un DataFrame con latitudes y longitudes específicas repetidas
 df3 = pd.DataFrame({
-    "col1": [mi_latitud] + list(np.random.randn(999) / 50 + mi_latitud),
-    "col2": [mi_longitud] + list(np.random.randn(999) / 50 + mi_longitud),
+    "col1": [mi_latitud] * 1000 + list(np.random.randn(999) / 50 + mi_latitud),
+    "col2": [mi_longitud] * 1000 + list(np.random.randn(999) / 50 + mi_longitud),
     "col3": np.random.randn(1000) * 100,
     "col4": np.random.rand(1000, 4).tolist(),
 })
+
 
 # Crear el mapa en Streamlit
 st.map(df3,
