@@ -217,17 +217,7 @@ mi_longitud2 = -77.05179021681842
 # Crear un DataFrame con latitudes y longitudes específicas
 num_repeticiones = 1000
 
-df4 = pd.DataFrame({
-    "col1": [mi_latitud1] * num_repeticiones,
-    "col2": [mi_longitud1] * num_repeticiones,
-    "col3": np.random.randn(num_repeticiones) * 100,
-    "col4": np.random.rand(num_repeticiones, 4).tolist(),
-})
-st.map(df4,
-    latitude='col1',
-    longitude='col2',
-    size='col3',
-    color='col4')
+
 
 df5 = pd.DataFrame({
     "col11": [mi_latitud2] * num_repeticiones,
