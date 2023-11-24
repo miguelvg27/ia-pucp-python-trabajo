@@ -133,83 +133,24 @@ plt.title(f"Ruido (dB) promedio por hora en {estacion}")
 st.pyplot(plt)
 
 
-df = pd.DataFrame(
-     np.random.randn(1000, 2) / [1, 1] + [-12.0727, -77.0827],
-     columns=['lat', 'lon'])
-
-# Centro de las coordenadas
-centro_lat = -12.0727
-centro_lon = -77.0827
-
-# Mostrar el mapa centrado en las coordenadas específicas
-#st.map(df, lat=centro_lat, lon=centro_lon, zoom=12)
-
-st.map(df)
-
-import streamlit as st
-import pandas as pd
-import numpy as np
-
-df2 = pd.DataFrame({
-    "col1": np.random.randn(1000) / 50 + -12.0727,
-    "col2": np.random.randn(1000) / 50 + -77.0827,
-    "col3": np.random.randn(1000) * 100,
-    "col4": np.random.rand(1000, 4).tolist(),
-})
-
-st.map(df2,
-    latitude='col1',
-    longitude='col2',
-    size='col3',
-    color='col4')
-
-# Definir latitud y longitud específicas
-mi_latitud = -12.119250414642934
-mi_longitud = -77.0528653
-
-# Crear un DataFrame con latitudes y longitudes específicas repetidas
-num_repeticiones = 1000
-latitudes = [mi_latitud] * num_repeticiones + list(np.random.randn(num_repeticiones) / 50 + mi_latitud)
-longitudes = [mi_longitud] * num_repeticiones + list(np.random.randn(num_repeticiones) / 50 + mi_longitud)
-
-df3 = pd.DataFrame({
-    "col1": latitudes,
-    "col2": longitudes,
-    "col3": np.random.randn(2 * num_repeticiones) * 100,
-    "col4": np.random.rand(2 * num_repeticiones, 4).tolist(),
-})
-
-# Añadir una columna 'contaminante' para demostración
-df3['contaminante'] = np.random.randn(2 * num_repeticiones)
-
-# Crear el mapa en Streamlit
-st.map(df3,
-    latitude='col1',
-    longitude='col2',
-    size='contaminante',
-    color='col4')
-
 
 #Dataset
 st.write(df_miraflores) 
 
 
 # Mapa automatico que cambia con el Slide de contaminantes y Estacion
-
+Grafico 7
 st.subheader(f'Mapa interactivo de emisiones de {contaminante} en {estacion} a las {hora_seleccionada} horas ')
 st.map(df_miraflores,
     latitude='Latitud',
     longitude='Longitud',
     color = "#3333FF",
     size = 200,
-       zoom =11,
+       zoom =12,
     use_container_width=True)
 
-
-
-
 # Mapa manual
-
+#Grafico 8
 #Ovalo Manuel Bonilla
 mi_latitud1 = -12.109997654778994
 mi_longitud1 = -77.0528653
