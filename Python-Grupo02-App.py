@@ -199,4 +199,31 @@ st.write(df_miraflores)
     #use_container_width=True  
 #) 
 
+import pandas as pd
+import numpy as np
+import streamlit as st
+
+# Definir latitud y longitud específicas
+mi_latitud = -12.0727
+mi_longitud = -77.0827
+
+# Crear un DataFrame con latitudes y longitudes específicas
+num_repeticiones = 1000
+
+df4 = pd.DataFrame({
+    "col1": [mi_latitud] * num_repeticiones,
+    "col2": [mi_longitud] * num_repeticiones,
+    "col3": np.random.randn(num_repeticiones) * 100,
+    "col4": np.random.rand(num_repeticiones, 4).tolist(),
+})
+
+# Añadir una columna 'contaminante' para demostración
+df4['contaminante'] = np.random.randn(num_repeticiones)
+
+# Crear el mapa en Streamlit
+st.map(df4,
+    latitude='col1',
+    longitude='col2',
+    size='contaminante',
+    color='col4')
 
