@@ -225,5 +225,5 @@ st.map(df4,
     latitude='col1',
     longitude='col2',
     size='contaminante',
-    color='contaminante')
+    color='col4')
 
