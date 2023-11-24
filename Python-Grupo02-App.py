@@ -180,7 +180,7 @@ st.map(df3,
     latitude='col1',
     longitude='col2',
     size='col3',
-    color='col4')
+    color='contaminante')
 
 st.write(df_miraflores) 
 
@@ -192,14 +192,4 @@ st.write(df_miraflores)
     #use_container_width=True  
 #) 
 
-fig = px.scatter_geo(
-    df_miraflores,
-    lat='Latitud',
-    lon='Longitud',
-    color=contaminante,
-    animation_frame='Hora',
-    projection='natural earth'
-)
 
-# Mostrar el gráfico en Streamlit
-st.plotly_chart(fig)
