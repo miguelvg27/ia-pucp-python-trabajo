@@ -181,9 +181,9 @@ st.map(df3,
     size='col3',
     color='col4')
 
-st.map(df_filtrado, 
+st.map(df_miraflores, 
     latitude='Latitud', 
     longitude='Longitud',
-    color='CO (ug/m3)',  # Puedes ajustar esto a la columna que desees visualizar
+    color=contaminante,  # Puedes ajustar esto a la columna que desees visualizar
     use_container_width=True  # Ajustar el ancho del mapa al contenedor
 ) 
