@@ -51,7 +51,7 @@ fecha_seleccionada = st.sidebar.slider(
     max_value=fecha_max,
     value=(pd.to_datetime('2020-11-01').date(), pd.to_datetime('2020-11-30').date())
 )
-hora_seleccionada = st.slider("Selecciona la hora", min_value=0, max_value=23, step=1, value=12)
+hora_seleccionada = st.sidebar.slider("Selecciona la hora", min_value=0, max_value=23, step=1, value=12)
 
 
 # Filtrar los datos
