@@ -204,8 +204,8 @@ import numpy as np
 import streamlit as st
 
 # Definir latitud y longitud específicas
-mi_latitud = -12.0727
-mi_longitud = -77.0827
+mi_latitud = -12.119250414642934
+mi_longitud = -77.02904771266907
 
 # Crear un DataFrame con latitudes y longitudes específicas
 num_repeticiones = 1000
