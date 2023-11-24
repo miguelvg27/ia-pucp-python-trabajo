@@ -223,6 +223,11 @@ df4 = pd.DataFrame({
     "col3": np.random.randn(num_repeticiones) * 100,
     "col4": np.random.rand(num_repeticiones, 4).tolist(),
 })
+st.map(df4,
+    latitude='col1',
+    longitude='col2',
+    size='col3',
+    color='col4')
 
 
 
