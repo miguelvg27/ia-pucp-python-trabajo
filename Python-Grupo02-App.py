@@ -73,7 +73,8 @@ df_temperatura = df_temperatura.reset_index()
 df_humedad = df_filtrado.groupby(['Humedad (%)'])[contaminante].mean()
 df_humedad = df_humedad.reset_index()
 
-
+#Crear una DataFrame del Ruido Promedio por hora
+df_hora_Ruido = df_filtrado.groupby(['Hora'])['Ruido (dB)'].mean().reset_index()
 
 # Crear el gráfico
 plt.figure(figsize=(10, 6))
@@ -113,6 +114,13 @@ sns.heatmap(df_filtrado[['Temperatura (C)', 'Humedad (%)']].corr(), annot=True)
 plt.title(f"Correlación entre Humedad y Temperatura por {contaminante} y {estacion}")
 plt.xticks(rotation=0)
 st.pyplot(plt)
+
+# Gráfico 6
+plt.figure(figsize=(10, 4))
+sns.lineplot(x="Hora", y="Ruido (dB)", marker='o', data=df_hora_Ruido, c='green')
+plt.title(f"Ruido (dB) promedio por hora en {estacion}")
+st.pyplot(plt)
+
 
 df = pd.DataFrame(
      np.random.randn(1000, 2) / [1, 1] + [-12.0727, -77.0827],
