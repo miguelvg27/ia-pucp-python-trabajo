@@ -143,7 +143,7 @@ fecha_fin_str = fecha_seleccionada[1].strftime("%d/%m/%Y")
 
 # Mapa automatico que cambia con el Slide de contaminantes y Estacion
 #Grafico 7
-st.subheader(f'Mapa interactivo de emisiones de {contaminante} en {estacion} a las {hora_seleccionada} horas desde {fecha incio_str} hasta {fecha_fin_str} ')
+st.subheader(f'Mapa interactivo de emisiones de {contaminante} en {estacion} a las {hora_seleccionada} horas desde {fecha_incio_str} hasta {fecha_fin_str} ')
 st.map(df_miraflores_hora,
     latitude='Latitud',
     longitude='Longitud',
