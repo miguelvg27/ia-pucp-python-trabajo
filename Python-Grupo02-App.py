@@ -217,7 +217,7 @@ st.map(df_miraflores,
     longitude='Longitud',
     color = "#3333FF",
     size = 100,
-       zoom =13,
+       zoom =11,
     use_container_width=True)
 
 df5 = pd.DataFrame({
