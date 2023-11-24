@@ -196,7 +196,7 @@ st.write(df_miraflores)
 
 # Mapa automatico que cambia con el Slide de contaminantes y Estacion
 
-st.subheader('Mapa interactivo por {estacion} y {contaminante} por hora ')
+st.subheader(f'Mapa interactivo por {estacion} y {contaminante} por hora')
 st.map(df_miraflores,
     latitude='Latitud',
     longitude='Longitud',
