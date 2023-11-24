@@ -192,8 +192,8 @@ df3['contaminante'] = np.random.randn(2 * num_repeticiones)
 
 # Crear el mapa en Streamlit
 st.map(df3,
-    latitude='col1',
-    longitude='col2',
+    latitude=df_miraflores['Latitud'],
+    longitude=df_miraflores['Latitud'],
     size='contaminante',
     color='col4')
 
@@ -222,7 +222,7 @@ mi_latitud = -12.119250414642934
 mi_longitud = -77.02904771266907
 
 # Crear un DataFrame con latitudes y longitudes específicas
-num_repeticiones = 1000
+num_repeticiones = 100
 
 df4 = pd.DataFrame({
     "col1": [df_miraflores['Latitud']] * num_repeticiones,
