@@ -190,3 +190,15 @@ st.write(df_miraflores)
    # cmap='viridis',
     #use_container_width=True  
 #) 
+
+fig = px.scatter_geo(
+    df_filtrado,
+    lat='Latitud',
+    lon='Longitud',
+    color=contaminante,
+    animation_frame='Hora',
+    projection='natural earth'
+)
+
+# Mostrar el gráfico en Streamlit
+st.plotly_chart(fig)
