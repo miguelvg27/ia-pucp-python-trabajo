@@ -76,7 +76,7 @@ df_humedad = df_humedad.reset_index()
 #Crear una DataFrame del Ruido Promedio por hora
 df_hora_Ruido = df_filtrado.groupby(['Hora'])['Ruido (dB)'].mean().reset_index()
 
-#df_miraflores = df_filtrado.groupby(['Latitud', 'Longitud'])['Contaminate'].mean().reset_index()
+df_miraflores = df_filtrado.groupby(['Latitud', 'Longitud'])[contaminate].mean().reset_index()
 
 # Crear el gráfico
 plt.figure(figsize=(10, 6))
@@ -106,14 +106,14 @@ st.pyplot(plt)
 # Gráfico 4
 plt.figure(figsize=(10, 4))
 sns.barplot(x='Hora', y='Humedad (%)', data=df_humedad, palette='plasma')
-plt.title(f"Promedio de Humedad de emisiones de {contaminante} en {estacion}")
+plt.title(f"Promedio de Humedad en % por hora en {estacion}")
 plt.xticks(rotation=90)
 st.pyplot(plt)
 
 # Gráfico 5
 plt.figure(figsize=(10, 4))
 sns.heatmap(df_filtrado[['Temperatura (C)', 'Humedad (%)']].corr(), annot=True)
-plt.title(f"Correlación entre Humedad y Temperatura por {contaminante} y {estacion}")
+plt.title(f"Correlación entre Humedad y Temperatura por  {estacion}")
 plt.xticks(rotation=0)
 st.pyplot(plt)
 
