@@ -163,14 +163,6 @@ st.map(df2,
     size='col3',
     color='col4')
 
-import streamlit as st
-import pandas as pd
-import numpy as np
-
-import streamlit as st
-import pandas as pd
-import numpy as np
-
 # Definir latitud y longitud específicas
 mi_latitud = -12.119250414642934
 mi_longitud = -77.0528653
@@ -197,9 +189,20 @@ st.map(df3,
     size='contaminante',
     color='col4')
 
+
+#Dataset
 st.write(df_miraflores) 
 
-# Definir latitud y longitud específicas
+# Mapa automatico que cambia con el Slide de contaminantes y Estacion
+st.map(df_miraflores,
+    latitude='Latitud',
+    longitude='Longitud',
+    color = "#3333FF",
+    size = 200,
+       zoom =11,
+    use_container_width=True)
+
+# Mapa manual
 
 #Ovalo Manuel Bonilla
 mi_latitud1 = -12.109997654778994
@@ -215,13 +218,7 @@ longitudes = [mi_longitud1, mi_longitud2] * (num_repeticiones // 2)
 # Crear un DataFrame con latitudes y longitudes específicas
 num_repeticiones = 1000
 
-st.map(df_miraflores,
-    latitude='Latitud',
-    longitude='Longitud',
-    color = "#3333FF",
-    size = 200,
-       zoom =11,
-    use_container_width=True)
+
 
 df5 = pd.DataFrame({
     "col11": latitudes,
