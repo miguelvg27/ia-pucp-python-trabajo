@@ -209,6 +209,9 @@ mi_longitud1 = -77.0528653
 mi_latitud2 = -12.119238450116725
 mi_longitud2 = -77.02906493158211
 
+latitudes = [mi_latitud1, mi_latitud2] * (num_repeticiones // 2)
+longitudes = [mi_longitud1, mi_longitud2] * (num_repeticiones // 2)
+
 # Crear un DataFrame con latitudes y longitudes específicas
 num_repeticiones = 1000
 
@@ -221,8 +224,8 @@ st.map(df_miraflores,
     use_container_width=True)
 
 df5 = pd.DataFrame({
-    "col11": [mi_latitud2] * num_repeticiones,
-    "col22": [mi_longitud2] * num_repeticiones,
+    "col11": latitudes,
+    "col22": longitudes,
     "col33": np.random.randn(num_repeticiones) * 100,
     "col44": np.random.rand(num_repeticiones, 4).tolist(),
 })
