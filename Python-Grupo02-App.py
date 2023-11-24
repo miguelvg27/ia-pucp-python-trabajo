@@ -230,16 +230,16 @@ st.map(df4,
     color='col4')
 
 df5 = pd.DataFrame({
-    "col1": [mi_latitud2] * num_repeticiones,
-    "col2": [mi_longitud2] * num_repeticiones,
-    "col3": np.random.randn(num_repeticiones) * 100,
-    "col4": np.random.rand(num_repeticiones, 4).tolist(),
+    "col11": [mi_latitud2] * num_repeticiones,
+    "col22": [mi_longitud2] * num_repeticiones,
+    "col33": np.random.randn(num_repeticiones) * 100,
+    "col44": np.random.rand(num_repeticiones, 4).tolist(),
 })
 st.map(df5,
-    latitude='col1',
-    longitude='col2',
-    size='col3',
-    color='col4')
+    latitude='col11',
+    longitude='col22',
+    size='col33',
+    color='col44')
 
 
 
