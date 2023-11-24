@@ -240,6 +240,7 @@ df4['contaminante'] = np.random.randn(num_repeticiones)
 st.map(df_miraflores,
     latitude='Latitud',
     longitude='Longitud',
+    size = 'Hora',
     color = 'Hora',
    use_container_width=True)
 
