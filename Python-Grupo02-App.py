@@ -198,18 +198,11 @@ st.map(df3,
     color='col4')
 
 st.write(df_miraflores) 
-
-#st.map(df_miraflores, 
- #   latitude='Latitud', 
- #   longitude='Longitud',
-  #  color=contaminante,  
-   # cmap='viridis',
-    #use_container_width=True  
-#) 
-
-import pandas as pd
-import numpy as np
-import streamlit as st
+st.map(df_miraflores,
+    latitude='Latitud',
+    longitude='Longitud',
+    color = "#ffaa0088",
+    use_container_width=True)
 
 # Definir latitud y longitud específicas
 
@@ -231,16 +224,6 @@ df4 = pd.DataFrame({
     "col4": np.random.rand(num_repeticiones, 4).tolist(),
 })
 
-# Añadir una columna 'contaminante' para demostración
-df4['contaminante'] = np.random.randn(num_repeticiones)
 
-# Crear el mapa en Streamlit
-
-
-st.map(df_miraflores,
-    latitude='Latitud',
-    longitude='Longitud',
-    color = "#ffaa0088",
-    use_container_width=True)
 
 
