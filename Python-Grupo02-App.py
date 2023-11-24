@@ -193,7 +193,10 @@ st.map(df3,
 #Dataset
 st.write(df_miraflores) 
 
+
 # Mapa automatico que cambia con el Slide de contaminantes y Estacion
+
+st.subheader('Mapa interactivo por {estacion} y {contaminante} por hora ')
 st.map(df_miraflores,
     latitude='Latitud',
     longitude='Longitud',
@@ -201,6 +204,9 @@ st.map(df_miraflores,
     size = 200,
        zoom =11,
     use_container_width=True)
+
+
+
 
 # Mapa manual
 
@@ -217,8 +223,6 @@ longitudes = [mi_longitud1, mi_longitud2] * (num_repeticiones // 2)
 
 # Crear un DataFrame con latitudes y longitudes específicas
 num_repeticiones = 1000
-
-
 
 df5 = pd.DataFrame({
     "col11": latitudes,
