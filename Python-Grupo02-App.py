@@ -215,7 +215,7 @@ num_repeticiones = 1000
 st.map(df_miraflores,
     latitude='Latitud',
     longitude='Longitud',
-    color = "#ffaa0088",
+    color = "#3333FF",
     size = 100,
        zoom =13,
     use_container_width=True)
