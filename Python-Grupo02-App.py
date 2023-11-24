@@ -134,3 +134,20 @@ centro_lon = -77.0827
 #st.map(df, lat=centro_lat, lon=centro_lon, zoom=12)
 
 st.map(df)
+
+import streamlit as st
+import pandas as pd
+import numpy as np
+
+df2 = pd.DataFrame({
+    "col1": np.random.randn(1000) / 50 + -12.0727,
+    "col2": np.random.randn(1000) / 50 + -77.0827,
+    "col3": np.random.randn(1000) * 100,
+    "col4": np.random.rand(1000, 4).tolist(),
+})
+
+st.map(df2,
+    latitude='col1',
+    longitude='col2',
+    size='col3',
+    color='col4')
