@@ -231,8 +231,14 @@ df4 = pd.DataFrame({
 df4['contaminante'] = np.random.randn(num_repeticiones)
 
 # Crear el mapa en Streamlit
-st.map(df_miraflores,
-    latitude='Latitud',
-    longitude='Longitud',
-    size='PM2.5 (ug/m3)')
+#st.map(df_miraflores,
+ #   latitude='Latitud',
+  #  longitude='Longitud',
+   # size='PM2.5 (ug/m3)')
+
+st.map(df4,
+    latitude='col1',
+    longitude='col2',
+    size='contaminante',
+    color='col4')
 
