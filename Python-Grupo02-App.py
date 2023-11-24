@@ -236,10 +236,11 @@ df4['contaminante'] = np.random.randn(num_repeticiones)
 
 # Crear el mapa en Streamlit
 
-plt.title("zones climatiques 2022")
+
 st.map(df_miraflores,
     latitude='Latitud',
     longitude='Longitud',
+    color = "#ffaa00"
     use_container_width=True)
 
 st.map(df4,
