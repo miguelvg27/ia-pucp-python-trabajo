@@ -7,3 +7,4 @@ geopandas
 ipyleaflet
 folium
 streamlit_folium
+plotly
