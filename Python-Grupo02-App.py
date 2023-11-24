@@ -229,8 +229,8 @@ st.map(df5,
 st.map(df_miraflores,
     latitude='Latitud',
     longitude='Longitud',
-    color = np.random.randn(num_repeticiones) * 100,
-    size = np.random.rand(num_repeticiones, 4).tolist(),
+    color = "#ffaa0088",
+    size = "10",
     use_container_width=True)
 
 
