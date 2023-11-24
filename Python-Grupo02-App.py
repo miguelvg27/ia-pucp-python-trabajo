@@ -218,7 +218,7 @@ df4 = pd.DataFrame({
 })
 
 # Añadir una columna 'contaminante' para demostración
-#df4['contaminante'] = np.random.randn(num_repeticiones)
+df4['contaminante'] = np.random.randn(num_repeticiones)
 
 # Crear el mapa en Streamlit
 st.map(df4,
