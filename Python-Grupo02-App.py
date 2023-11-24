@@ -4,6 +4,7 @@ import numpy as np
 import seaborn as sns
 import matplotlib.pyplot as plt
 from datetime import datetime
+import plotly.express as px
 #import subprocess
 
 #subprocess.run(["pip", "install", "pandas", "folium", "streamlit_folium", "geopandas", "ipyleaflet", "Map", "GeoJSON", "Marker", "MarkerCluster"])
