@@ -168,13 +168,19 @@ mi_latitud = -12.0727
 mi_longitud = -77.0827
 
 # Crear un DataFrame con latitudes y longitudes específicas repetidas
+num_repeticiones = 1000
+latitudes = [mi_latitud] * num_repeticiones + list(np.random.randn(num_repeticiones) / 50 + mi_latitud)
+longitudes = [mi_longitud] * num_repeticiones + list(np.random.randn(num_repeticiones) / 50 + mi_longitud)
+
 df3 = pd.DataFrame({
-    "col1": [mi_latitud] * 1000 + list(np.random.randn(999) / 50 + mi_latitud),
-    "col2": [mi_longitud] * 1000 + list(np.random.randn(999) / 50 + mi_longitud),
-    "col3": np.random.randn(1000) * 100,
-    "col4": np.random.rand(1000, 4).tolist(),
+    "col1": latitudes,
+    "col2": longitudes,
+    "col3": np.random.randn(2 * num_repeticiones) * 100,
+    "col4": np.random.rand(2 * num_repeticiones, 4).tolist(),
 })
 
+# Añadir una columna 'contaminante' para demostración
+df3['contaminante'] = np.random.randn(2 * num_repeticiones)
 
 # Crear el mapa en Streamlit
 st.map(df3,
