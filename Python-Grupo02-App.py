@@ -198,11 +198,6 @@ st.map(df3,
     color='col4')
 
 st.write(df_miraflores) 
-st.map(df_miraflores,
-    latitude='Latitud',
-    longitude='Longitud',
-    color = "#ffaa0088",
-    use_container_width=True)
 
 # Definir latitud y longitud específicas
 
@@ -230,6 +225,13 @@ st.map(df5,
     longitude='col22',
     size='col33',
     color='col44')
+st.map(df_miraflores,
+    latitude='Latitud',
+    longitude='Longitud',
+    color = "col33",
+    size = "col44",
+    use_container_width=True)
+
 
 
 
