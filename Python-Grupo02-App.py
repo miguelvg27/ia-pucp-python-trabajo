@@ -237,7 +237,7 @@ df4['contaminante'] = np.random.randn(num_repeticiones)
 # Crear el mapa en Streamlit
 
 
-st.map(df_miraflores,
+st.map(df_miraflores_hora,
     latitude='Latitud',
     longitude='Longitud',
     size = 'Hora',
