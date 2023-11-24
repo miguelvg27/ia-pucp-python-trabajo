@@ -168,8 +168,8 @@ import pandas as pd
 import numpy as np
 
 # Definir latitud y longitud específicas
-mi_latitud = -12.0727
-mi_longitud = -77.0827
+mi_latitud = -12.119250414642934
+mi_longitud = -77.0528653
 
 # Crear un DataFrame con latitudes y longitudes específicas repetidas
 num_repeticiones = 1000
@@ -211,7 +211,7 @@ import streamlit as st
 
 #Ovalo Manuel Bonilla
 mi_latitud = -12.119250414642934
-mi_longitud = --77.0528653
+mi_longitud = -77.0528653
 
 #Ovalo Miraflores
 mi_latitud = -12.119250414642934
