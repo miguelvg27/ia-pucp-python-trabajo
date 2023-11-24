@@ -192,7 +192,7 @@ st.write(df_miraflores)
 #) 
 
 fig = px.scatter_geo(
-    df_filtrado,
+    df_miraflores,
     lat='Latitud',
     lon='Longitud',
     color=contaminante,
