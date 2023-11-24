@@ -225,11 +225,12 @@ st.map(df5,
     longitude='col22',
     size='col33',
     color='col44')
+
 st.map(df_miraflores,
     latitude='Latitud',
     longitude='Longitud',
-    color = "col33",
-    size = "col44",
+    color = np.random.randn(num_repeticiones) * 100,
+    size = np.random.rand(num_repeticiones, 4).tolist(),
     use_container_width=True)
 
 
