@@ -211,8 +211,8 @@ mi_latitud = -12.119250414642934
 mi_longitud = -77.0528653
 
 #Ovalo Miraflores
-mi_latitud = -12.119250414642934
-mi_longitud = -77.02904771266907
+mi_latitud = df_miraflores['Latitud']
+mi_longitud = df_miraflores['Longitud']
 
 # Crear un DataFrame con latitudes y longitudes específicas
 num_repeticiones = 1000
