@@ -211,8 +211,8 @@ mi_latitud1 = -12.109997654778994
 mi_longitud1 = -77.0528653
 
 #Ovalo Miraflores
-mi_latitud2 = -12.11926161728536
-mi_longitud2 = -77.05179021681842
+mi_latitud2 = -12.119238450116725
+mi_longitud2 = -77.02906493158211
 
 # Crear un DataFrame con latitudes y longitudes específicas
 num_repeticiones = 1000
